@@ -18,8 +18,8 @@ const usuarioSchema = new mongoose.Schema([{
     },
 
     senha: {
-        type: Number,
-        required: 'Favor informar uma senha de 8 caracteres númericos.',
+        type: String,
+        required: 'Favor informar uma senha de 8 caracteres alfanúmericos.',
         select: false
     },
 

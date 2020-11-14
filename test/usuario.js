@@ -22,7 +22,7 @@ describe('POST usuario', () => {
         nome: 'Lionel',
         sobrenome: 'Messi',
         email: 'jogadormessi@mail.com',
-        senha: 12345678
+        senha: '12345678'
       })
       .end((error, response) => {
         response.should.have.status(201);
