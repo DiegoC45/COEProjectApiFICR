@@ -19,8 +19,7 @@ const usuarioSchema = new mongoose.Schema([{
 
     senha: {
         type: String,
-        required: 'Favor informar uma senha de 8 caracteres alfanúmericos.',
-        select: false
+        required: 'Favor informar uma senha de 8 caracteres alfanúmericos.'
     },
 
 }])
