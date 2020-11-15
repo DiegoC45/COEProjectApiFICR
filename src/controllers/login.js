@@ -18,7 +18,10 @@ exports.login = (req, res) => {
     
             bcrypt.compare(senha, usuario.senha, (err, same) => {
                 if (same) {
-                  return res.status(200).send({ usuario });
+                  return res.status(200).send({ 
+                    message: 'Login feito com sucesso.',
+                    data: usuario
+                   });
                 }
     
                 res.status(403).send(errResponse);
