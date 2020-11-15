@@ -51,12 +51,30 @@ Hooks and filters directory? [~/COEProjectApiFICR/.git/hooks]
 
 Para mais informações sobre o git flow, [clique aqui](https://danielkummer.github.io/git-flow-cheatsheet/index.pt_BR.html).
 
+### Conectando com o banco de dados
+
+Deve ser criando na raiz do projeto o arquivo `.env` e adicionar a URL de conexão com o banco de dados.
+
+```bash
+DATABASE_URL=mongodb+srv://<usuario>:<senha>@<cluster>.pis0t.mongodb.net/coedb?retryWrites=true&w=majority
+```
+
 ### Executando o servidor
 
 Para executar o servidor no ambiente de desenvolvimento.
 
 ```bash
 npm run dev
+```
+
+### Executando testes unitários automatizados
+
+Execute o comando abaixo:
+
+OBS.: Deve ser criado um banco de dados exclusivamente para a execução dos testes, que deve ser diferente do banco de desenvolvimento ou produção para que não haja interferência nos testes nem perda de dados importantes.
+
+```bash
+npm run test
 ```
 
 ### Fluxo do git para o desenvolvimento das features
