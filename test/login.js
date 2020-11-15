@@ -54,8 +54,9 @@ describe('POST login', () => {
       .end((error, response) => {
         response.should.have.status(200);
         response.body.should.be.a('object');
-        response.body.should.have.property('usuario');
-        response.body.should.have.nested.property('usuario.email', 'jogadorneymar@mail.com');
+        response.body.should.have.property('data');
+        response.body.should.have.property('message', 'Login feito com sucesso.');
+        response.body.should.have.nested.property('data.email', 'jogadorneymar@mail.com');
         done();
       });
   });
