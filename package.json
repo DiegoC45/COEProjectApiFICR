@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha --timeout 10000 --exit",
     "start": "set NODE_ENV=production && node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "web": "npm run start"
   },
   "repository": {
     "type": "git",
