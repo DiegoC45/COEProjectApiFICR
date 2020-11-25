@@ -4,7 +4,7 @@ const Usuario = require('../src/models/usuario'),
     chai = require('chai'),
     should = chai.should(),
     chaiHttp = require('chai-http'),
-    app = require('../app'),
+    app = require('../src/app'),
     usuarioTeste = null;
 
 chai.use(chaiHttp);
