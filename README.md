@@ -53,10 +53,12 @@ Para mais informações sobre o git flow, [clique aqui](https://danielkummer.git
 
 ### Conectando com o banco de dados
 
-Deve ser criando na raiz do projeto o arquivo `.env` e adicionar a URL de conexão com o banco de dados.
+Deve ser criando na raiz do projeto o arquivo `.env` e adicionar a URL de conexão com o banco de dados. Devem ser informados os bancos de produção, testes unitários ou desenvolvimento conforme abaixo:
 
 ```bash
-DATABASE_URL=mongodb+srv://<usuario>:<senha>@<cluster>.pis0t.mongodb.net/coedb?retryWrites=true&w=majority
+DEVELOPMENT_DATABASE_URL=mongodb+srv://<usuario>:<senha>@<cluster>.pis0t.mongodb.net/coedb?retryWrites=true&w=majority
+TEST_DATABASE_URL=mongodb+srv://<usuario>:<senha>@<cluster>.pis0t.mongodb.net/coedb?retryWrites=true&w=majority
+DEVELOPMENT_DATABASE_URL=mongodb+srv://<usuario>:<senha>@<cluster>.pis0t.mongodb.net/coedb?retryWrites=true&w=majority
 ```
 
 ### Executando o servidor
