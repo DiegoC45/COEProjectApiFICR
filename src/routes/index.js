@@ -1,9 +1,10 @@
-const usuarioController = require('../controllers/usuario');
-const loginController = require('../controllers/login');
+const loginRoutes = require('./login');
+const usuarioRoutes = require('./usuario');
+const categoriaRoutes = require('./categoria');
 
 module.exports = (app) => {
-    
-    app.post('/api/usuarios', usuarioController.salvar);
-    app.post('/api/login', loginController.login);
+    app.use('/api/login', loginRoutes);
+    app.use('/api/usuarios', usuarioRoutes);
+    app.use('/api/categorias', categoriaRoutes);
 
 }
