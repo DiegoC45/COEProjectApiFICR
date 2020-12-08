@@ -2,8 +2,8 @@ const mongoose = require('../config/database');
 
 const CursoSchema = new mongoose.Schema({
     nome: {
-      type: String,
-      required: true,
+        type: String,
+        required: true,
     },
     descricao: {
         type: String,
