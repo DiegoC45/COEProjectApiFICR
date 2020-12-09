@@ -1,7 +1,7 @@
 const mongoose = require('../config/database');
 
-const AulaSchema = new mongoose.Schema({
-    titulo: {
+const VideoSchema = new mongoose.Schema({
+    nome: {
       type: String,
       required: true,
     },
@@ -9,7 +9,7 @@ const AulaSchema = new mongoose.Schema({
         type: String,
         required: false,
     },
-    videoUrl: {
+    url: {
         type: String,
         required: false,
     },
@@ -24,4 +24,4 @@ const AulaSchema = new mongoose.Schema({
     },
 });
 
-module.exports = mongoose.model('Aula', AulaSchema);
+module.exports = mongoose.model('Video', VideoSchema);
