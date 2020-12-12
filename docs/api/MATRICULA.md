@@ -25,7 +25,7 @@
 **Body**
 
 - **message**: Mensagem informando que a requisição foi bem sucedida.
-- **data**: Usuário logado.
+- **data**: Matrícula efetivada com sucesso..
 
 ```
 {
