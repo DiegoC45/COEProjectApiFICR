@@ -4,6 +4,7 @@ const Schema = mongoose.Schema
 const matriculaSchema = new Schema([{
     aprovado: {
         type: Boolean,
+        default: false,
         required: 'Favor informar se foi aprovado ou não.'
     },
  

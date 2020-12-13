@@ -12,9 +12,7 @@ exports.createMatricula = (req, res) => {
 
     new Matricula({
         usuario: mongoose.Types.ObjectId(usuario),
-        curso: mongoose.Types.ObjectId(curso),
-        dataDeMatricula: new Date(),
-        aprovado: false
+        curso: mongoose.Types.ObjectId(curso)
     })
         .save((error, matricula) => {
             if (error) {
