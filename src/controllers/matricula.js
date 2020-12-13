@@ -55,8 +55,7 @@ exports.getMatriculasByUsuario = (req, res) => {
         where.aprovado = aprovado;
     }
 
-    Matricula
-    .find(where,
+    Matricula.find(where,
         (error, matriculas) => {
             if (error) {
                 return res.send(error).status(400);
