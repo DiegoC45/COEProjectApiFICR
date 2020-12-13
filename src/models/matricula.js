@@ -1,10 +1,10 @@
 const mongoose = require('mongoose')
-const matriculaRoutes = require('../routes/matricula')
 const Schema = mongoose.Schema
 
 const matriculaSchema = new Schema([{
     aprovado: {
         type: Boolean,
+        default: false,
         required: 'Favor informar se foi aprovado ou não.'
     },
  
@@ -29,6 +29,4 @@ const matriculaSchema = new Schema([{
 
 }])
 
-
-
-module.exports = mongoose.model('Matricula', matriculaSchema)
+module.exports = mongoose.model('Matricula', matriculaSchema);
