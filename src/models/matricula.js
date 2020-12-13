@@ -1,5 +1,18 @@
 const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const Schema = mongoose.Schema;
+
+const aulaSchema = new mongoose.Schema({
+    visualizado: {
+      type: String,
+      required: true,
+      default: false
+    },
+    video: {
+        type: mongoose.Schema.Types.Mixed,
+        ref: 'Video',
+        required: true,
+    },
+  });
 
 const matriculaSchema = new Schema([{
     aprovado: {
@@ -26,9 +39,9 @@ const matriculaSchema = new Schema([{
         required: true,
     },
 
+    aulas: [aulaSchema]
 
 }])
 
-// matriculaSchema.plugin(require('mongoose-subquery'));
 
 module.exports = mongoose.model('Matricula', matriculaSchema);

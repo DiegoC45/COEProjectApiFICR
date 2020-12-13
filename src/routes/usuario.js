@@ -4,4 +4,4 @@ const { getMatriculasByUsuario } = require('../controllers/matricula');
 
 module.exports = express.Router() 
                     .post('/', salvar)
-                    .get('/:id/cursos', getMatriculasByUsuario);
+                    .get('/:id/matriculas', getMatriculasByUsuario);
