@@ -3,7 +3,7 @@ const usuarioRoutes = require('./usuario');
 const categoriaRoutes = require('./categoria');
 const cursosRoutes = require('./curso');
 const videosRoutes = require('./video');
-const matriculaRoutes = require('./matricula');
+const matriculasRoutes = require('./matricula');
 
 module.exports = (app) => {
     app.use('/api/login', loginRoutes);
@@ -11,5 +11,5 @@ module.exports = (app) => {
     app.use('/api/categorias', categoriaRoutes);
     app.use('/api/cursos', cursosRoutes);
     app.use('/api/videos', videosRoutes);
-    app.use('/api/matricula', matriculaRoutes);
+    app.use('/api/matriculas', matriculasRoutes);
 }

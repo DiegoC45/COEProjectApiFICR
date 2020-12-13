@@ -1,5 +1,18 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const mongoose = require('../config/database');
+const Schema = mongoose.Schema;
+
+const aulaSchema = new mongoose.Schema({
+    visualizado: {
+      type: Boolean,
+      required: true,
+    },
+    video: {
+        type: mongoose.Schema.Types.Mixed,
+        ref: 'Video',
+        required: true,
+    },
+});
+
 
 const matriculaSchema = new Schema([{
     aprovado: {
@@ -26,6 +39,7 @@ const matriculaSchema = new Schema([{
         required: true,
     },
 
+    aulas: [aulaSchema]
 
 }])
 
