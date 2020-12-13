@@ -29,4 +29,6 @@ const matriculaSchema = new Schema([{
 
 }])
 
+// matriculaSchema.plugin(require('mongoose-subquery'));
+
 module.exports = mongoose.model('Matricula', matriculaSchema);

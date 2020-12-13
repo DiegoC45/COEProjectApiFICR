@@ -25,3 +25,30 @@ exports.createMatricula = (req, res) => {
             res.status(201).json(response)
     })
 }
+
+exports.getMatriculasByUsuario = (req, res) => {
+
+    const where = {
+        usuario: {
+            _id: mongoose.Types.ObjectId(req.params.id)
+        }
+    }
+
+    const { aprovado } = req.query;
+
+    if (aprovado != null) {
+        where.aprovado = aprovado;
+    }
+
+    Matricula
+    .find(where,
+        (error, matriculas) => {
+            if (error) {
+                return res.send(error).status(400);
+            }
+
+            res.send(matriculas).status(200);
+        }
+    )
+    .populate('curso')
+}
