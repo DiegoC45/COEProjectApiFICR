@@ -2,9 +2,15 @@ const Video = require('../models/video')
 
 exports.searchVideos = (req, res) => {
 
-    Video.find({ nome: req.query.text }, (error, videos) => {
+    const { q } = req.query;
+    const where = {}
+    if (q) where.nome = new RegExp(q, 'i');
+
+    Video.find(where, (error, videos) => {
         if (error) {
-            return res.send(error).status(400);
+            return res.send(error).status(400)({
+                message: 'Nenhum vídeo encontrado.' 
+            });
         }
 
         res.send(videos).status(200);
