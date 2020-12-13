@@ -5,4 +5,4 @@ const { getVideosByCurso } = require('../controllers/video');
 module.exports = express.Router() 
                     .get('/', listar)
                     .get('/:id', buscarPorId)
-                    .get('/:id/aulas', getVideosByCurso);
+                    .get('/:id/videos', getVideosByCurso);
