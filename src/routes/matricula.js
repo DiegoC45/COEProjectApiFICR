@@ -1,5 +1,6 @@
 const express = require('express');
-const { createMatricula } = require('../controllers/matricula');
+const { createMatricula, update } = require('../controllers/matricula');
 
 module.exports = express.Router() 
-                    .post('/', createMatricula);
+                    .post('/', createMatricula)
+                    .put('/:id', update);

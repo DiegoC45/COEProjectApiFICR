@@ -18,7 +18,7 @@ exports.createMatricula = (req, res) => {
             }
 
             const aulas = [];
-            videos.forEach(video => aulas.push({ video }));
+            videos.forEach(video => aulas.push({ video, visualizado: false }));
             
             new Matricula({
                 usuario: mongoose.Types.ObjectId(usuario),
@@ -66,4 +66,28 @@ exports.getMatriculasByUsuario = (req, res) => {
         }
     )
     .populate('curso')
+}
+
+exports.update = (req, res) => {
+
+    const { id } = req.params;
+
+    if (!id)
+        return res.status(400).send({
+            message: 'O ID é obrigatório.' 
+        });
+
+        Matricula.findByIdAndUpdate(id, req.body, { new: true },
+            (error, matricula) => {
+                if(!matricula) {
+                    return res.status(404).send({
+                        message: 'Matricula não encontrada.'
+                    });
+                }
+
+                matricula.aprovado = !matricula.aulas.some(aula => !aula.visualizado);
+                matricula.save();
+                return res.status(200).send(matricula);
+            }
+    );
 }

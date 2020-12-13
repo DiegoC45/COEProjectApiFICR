@@ -1,18 +1,18 @@
-const mongoose = require('mongoose')
+const mongoose = require('../config/database');
 const Schema = mongoose.Schema;
 
 const aulaSchema = new mongoose.Schema({
     visualizado: {
-      type: String,
+      type: Boolean,
       required: true,
-      default: false
     },
     video: {
         type: mongoose.Schema.Types.Mixed,
         ref: 'Video',
         required: true,
     },
-  });
+});
+
 
 const matriculaSchema = new Schema([{
     aprovado: {
@@ -42,6 +42,5 @@ const matriculaSchema = new Schema([{
     aulas: [aulaSchema]
 
 }])
-
 
 module.exports = mongoose.model('Matricula', matriculaSchema);
