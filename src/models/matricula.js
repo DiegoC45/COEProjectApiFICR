@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-const matriculaRoutes = require('../routes/matricula')
 const Schema = mongoose.Schema
 
 const matriculaSchema = new Schema([{
@@ -29,6 +28,4 @@ const matriculaSchema = new Schema([{
 
 }])
 
-
-
-module.exports = mongoose.model('Matricula', matriculaSchema)
+module.exports = mongoose.model('Matricula', matriculaSchema);

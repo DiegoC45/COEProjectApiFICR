@@ -1,7 +1,5 @@
-module.exports = function (app) {
-    const matricula = require('../controllers/matricula')
-    app.route('/matricula')
+const express = require('express');
+const { createMatricula } = require('../controllers/matricula');
 
-    .post(matricula.createMatricula)  
-
-}
+module.exports = express.Router() 
+                    .post('/', createMatricula);
