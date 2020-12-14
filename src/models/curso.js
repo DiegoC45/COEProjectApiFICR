@@ -13,6 +13,10 @@ const CursoSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    imgUrl: {
+        type: String,
+        required: true,
+    },
     categoria: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Categoria',

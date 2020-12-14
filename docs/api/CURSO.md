@@ -30,6 +30,7 @@
         "descricao": "Professor: Gustavo Guanabara",
         "badge": "HTML5_AVANCADO",
         "categoria": "5fcb0d176a3de43280bc8ee5",
+        "imgUrl": "https://tecnoblog.net/wp-content/uploads/2014/10/html5.jpg",
         "__v": 0
     }
 ]
@@ -64,6 +65,7 @@
     "descricao": "Professor: Gustavo Guanabara",
     "badge": "HTML5_AVANCADO",
     "categoria": "5fcb0d176a3de43280bc8ee5",
+    "imgUrl": "https://tecnoblog.net/wp-content/uploads/2014/10/html5.jpg",
     "__v": 0
 }
 ```
