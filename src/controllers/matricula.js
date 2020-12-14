@@ -65,6 +65,7 @@ exports.getMatriculasByUsuario = (req, res) => {
         }
     )
     .populate('curso')
+    .populate('aulas.video')
 }
 
 exports.update = (req, res) => {
@@ -88,5 +89,7 @@ exports.update = (req, res) => {
                 matricula.save();
                 return res.status(200).send(matricula);
             }
-    );
+    )
+    .populate('curso')
+    .populate('aulas.video');
 }

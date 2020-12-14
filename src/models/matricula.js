@@ -7,7 +7,7 @@ const aulaSchema = new mongoose.Schema({
       required: true,
     },
     video: {
-        type: mongoose.Schema.Types.Mixed,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Video',
         required: true,
     },
